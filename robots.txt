@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://utilityshelf.com/text-cleaner/sitemap.xml
+

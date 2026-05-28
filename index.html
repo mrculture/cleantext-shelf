@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CleanText Shelf | Private Text & Clipboard Cleaner</title>
+    <meta
+      name="description"
+      content="Clean hidden characters, messy formatting, tracking links, and sensitive details from pasted text in your browser."
+    >
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="CleanText Shelf">
+    <meta
+      property="og:description"
+      content="A private browser-only text cleaner for hidden characters, messy formatting, tracking links, and sensitive details."
+    >
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="CleanText Shelf home">
+        <span class="brand-mark">U</span>
+        <span>
+          <strong>CleanText Shelf</strong>
+          <small>by UtilityShelf</small>
+        </span>
+      </a>
+      <p class="privacy-note">Browser-only. Your text is not uploaded.</p>
+    </header>
+
+    <main>
+      <section class="tool-intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Text cleaner</p>
+          <h1 id="page-title">Clean pasted text before you publish or share it.</h1>
+          <p class="lede">
+            Reveal invisible characters, remove messy formatting, clean tracking links,
+            and redact personal details without sending your text to a server.
+          </p>
+        </div>
+        <div class="quick-stats" aria-label="Text statistics">
+          <div>
+            <span id="charCount">0</span>
+            <small>characters</small>
+          </div>
+          <div>
+            <span id="wordCount">0</span>
+            <small>words</small>
+          </div>
+          <div>
+            <span id="hiddenCount">0</span>
+            <small>hidden marks</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Text cleaning workspace">
+        <div class="editor-column">
+          <div class="panel-heading">
+            <h2>Original Text</h2>
+            <button class="text-button" id="sampleButton" type="button">Load sample</button>
+          </div>
+          <p class="limit-note">
+            Best under 100,000 characters. Large text is cleaned locally, with preview
+            limited to keep your browser responsive.
+          </p>
+          <textarea
+            id="inputText"
+            spellcheck="true"
+            maxlength="500000"
+            placeholder="Paste text here..."
+            aria-label="Original text"
+          ></textarea>
+        </div>
+
+        <form class="options-column" aria-label="Cleanup options">
+          <h2>Cleanup Options</h2>
+          <label>
+            <input type="checkbox" id="removeInvisible" checked>
+            <span>Remove invisible characters</span>
+          </label>
+          <label>
+            <input type="checkbox" id="normalizeWhitespace" checked>
+            <span>Normalize whitespace</span>
+          </label>
+          <label>
+            <input type="checkbox" id="smartQuotes" checked>
+            <span>Convert smart quotes</span>
+          </label>
+          <label>
+            <input type="checkbox" id="plainDashes">
+            <span>Convert long dashes</span>
+          </label>
+          <label>
+            <input type="checkbox" id="removeTracking" checked>
+            <span>Clean tracking links</span>
+          </label>
+          <label>
+            <input type="checkbox" id="redactPersonal">
+            <span>Redact emails and phone numbers</span>
+          </label>
+          <div class="button-row">
+            <button class="primary-button" id="cleanButton" type="button">Clean Text</button>
+            <button class="ghost-button" id="clearButton" type="button">Clear</button>
+          </div>
+        </form>
+
+        <div class="editor-column">
+          <div class="panel-heading">
+            <h2>Cleaned Text</h2>
+            <button class="text-button" id="copyButton" type="button">Copy</button>
+          </div>
+          <textarea
+            id="outputText"
+            readonly
+            aria-label="Cleaned text"
+            placeholder="Cleaned text will appear here..."
+          ></textarea>
+          <p class="status" id="statusMessage" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="inspection" aria-labelledby="inspection-title">
+        <div>
+          <p class="eyebrow">Inspection</p>
+          <h2 id="inspection-title">Hidden Character Preview</h2>
+          <p>
+            Suspicious invisible characters are shown as labeled markers so you can see
+            what is hiding inside copied text.
+          </p>
+        </div>
+        <pre id="preview" aria-label="Hidden character preview"></pre>
+      </section>
+
+      <section class="reference" aria-label="Useful notes">
+        <article>
+          <h2>What It Cleans</h2>
+          <p>
+            Zero-width spaces, byte order marks, directional marks, soft hyphens,
+            non-breaking spaces, repeated blank lines, smart punctuation, and common
+            tracking parameters such as UTM, fbclid, and gclid.
+          </p>
+        </article>
+        <article>
+          <h2>Why It Helps</h2>
+          <p>
+            Hidden formatting can break forms, code snippets, CMS editors, CSV files,
+            newsletter layouts, and social posts. Cleaning it early saves dull manual fixes.
+          </p>
+        </article>
+        <article>
+          <h2>Privacy First</h2>
+          <p>
+            The first version runs entirely in your browser. No accounts, no uploads,
+            and no pasted text stored by the site.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p>CleanText Shelf is a UtilityShelf micro utility for safer, cleaner text.</p>
+        <nav aria-label="Site policies">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
