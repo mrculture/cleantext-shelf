@@ -185,6 +185,11 @@ h2 {
   margin-bottom: 12px;
 }
 
+.mini-actions {
+  display: flex;
+  gap: 8px;
+}
+
 .panel-heading h2 {
   margin-bottom: 0;
 }
@@ -218,6 +223,29 @@ textarea:focus {
   display: flex;
   gap: 10px;
   padding: 13px 0;
+}
+
+.preset-group {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 10px;
+}
+
+.preset-button {
+  background: #fbfcfa;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  min-height: 40px;
+  padding: 8px 10px;
+}
+
+.preset-button.active {
+  background: rgba(29, 107, 85, 0.1);
+  border-color: var(--green);
+  color: var(--green-dark);
+  font-weight: 800;
 }
 
 .options-column input {
@@ -271,6 +299,31 @@ textarea:focus {
 
 .status.warning {
   color: var(--coral);
+}
+
+.summary {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 12px 0 0;
+}
+
+.summary div {
+  background: #fbfcfa;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.summary dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.summary dd {
+  font-size: 1.28rem;
+  font-weight: 800;
+  margin: 2px 0 0;
 }
 
 .inspection {
@@ -396,6 +449,60 @@ pre {
   padding-left: 20px;
 }
 
+.shelf-teaser {
+  align-items: start;
+  background: var(--ink);
+  border-radius: 8px;
+  color: #f5faf6;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.2fr);
+  margin-top: 36px;
+  padding: clamp(24px, 5vw, 42px);
+}
+
+.shelf-teaser .eyebrow,
+.shelf-teaser p {
+  color: #c8d7d0;
+}
+
+.shelf-teaser h2 {
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.tool-roadmap {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tool-roadmap article {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.tool-roadmap span {
+  color: #f0c35a;
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.tool-roadmap h3 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+.tool-roadmap p {
+  margin-bottom: 0;
+}
+
 footer {
   border-top: 1px solid var(--line);
   padding: 22px clamp(18px, 4vw, 56px);
@@ -459,7 +566,9 @@ footer a,
   .inspection,
   .reference,
   .guide-grid,
-  .use-cases ul {
+  .use-cases ul,
+  .shelf-teaser,
+  .tool-roadmap {
     grid-template-columns: 1fr;
   }
 

@@ -15,7 +15,29 @@
       content="A private browser-only text cleaner for hidden characters, messy formatting, tracking links, and sensitive details."
     >
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css">
+    <meta property="og:url" content="https://cleantext-shelf.pages.dev/">
+    <link rel="canonical" href="https://cleantext-shelf.pages.dev/">
+    <link rel="stylesheet" href="styles.css?v=20260528-public1">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CleanText Shelf",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Any",
+        "url": "https://cleantext-shelf.pages.dev/",
+        "description": "A browser-only text cleaner for hidden characters, messy formatting, tracking links, and sensitive details.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "UtilityShelf"
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -76,6 +98,12 @@
 
         <form class="options-column" aria-label="Cleanup options">
           <h2>Cleanup Options</h2>
+          <div class="preset-group" aria-label="Preset cleanup modes">
+            <button class="preset-button active" type="button" data-preset="publish">Publish</button>
+            <button class="preset-button" type="button" data-preset="developer">Developer</button>
+            <button class="preset-button" type="button" data-preset="privacy">Privacy</button>
+            <button class="preset-button" type="button" data-preset="plain">Plain Text</button>
+          </div>
           <label>
             <input type="checkbox" id="removeInvisible" checked>
             <span>Remove invisible characters</span>
@@ -109,7 +137,10 @@
         <div class="editor-column">
           <div class="panel-heading">
             <h2>Cleaned Text</h2>
-            <button class="text-button" id="copyButton" type="button">Copy</button>
+            <div class="mini-actions">
+              <button class="text-button" id="downloadButton" type="button">Download</button>
+              <button class="text-button" id="copyButton" type="button">Copy</button>
+            </div>
           </div>
           <textarea
             id="outputText"
@@ -118,6 +149,24 @@
             placeholder="Cleaned text will appear here..."
           ></textarea>
           <p class="status" id="statusMessage" role="status" aria-live="polite"></p>
+          <dl class="summary" aria-label="Cleanup summary">
+            <div>
+              <dt>Hidden removed</dt>
+              <dd id="summaryHidden">0</dd>
+            </div>
+            <div>
+              <dt>Tracking params</dt>
+              <dd id="summaryTracking">0</dd>
+            </div>
+            <div>
+              <dt>Emails redacted</dt>
+              <dd id="summaryEmails">0</dd>
+            </div>
+            <div>
+              <dt>Phones redacted</dt>
+              <dd id="summaryPhones">0</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -216,6 +265,34 @@
           </ul>
         </div>
       </section>
+
+      <section class="shelf-teaser" aria-labelledby="shelf-title">
+        <div>
+          <p class="eyebrow">UtilityShelf</p>
+          <h2 id="shelf-title">A Growing Shelf of Practical Micro Tools</h2>
+          <p>
+            CleanText Shelf is the first UtilityShelf tool: small, focused, and built
+            for everyday cleanup tasks that should not need a full software suite.
+          </p>
+        </div>
+        <div class="tool-roadmap" aria-label="UtilityShelf tool roadmap">
+          <article>
+            <span>Live</span>
+            <h3>Text Cleaner</h3>
+            <p>Hidden characters, tracking links, redaction, and clean plain text.</p>
+          </article>
+          <article>
+            <span>Next</span>
+            <h3>Link Cleaner</h3>
+            <p>Strip tracking parameters and prepare clean links for sharing.</p>
+          </article>
+          <article>
+            <span>Planned</span>
+            <h3>Metadata Checker</h3>
+            <p>Inspect file and image metadata before publishing or sharing.</p>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -229,6 +306,6 @@
       </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260528-public1"></script>
   </body>
 </html>
