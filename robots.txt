@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://utilityshelf.com/text-cleaner/sitemap.xml
-
+Sitemap: https://cleantext-shelf.pages.dev/sitemap.xml
