@@ -66,11 +66,10 @@ Use this if you want the simplest GitHub-only validation route.
 
 For long-term UtilityShelf SEO, use:
 
-`https://utilityshelf.com/text-cleaner/`
+`https://cleantext.utilityshelf.site/`
 
 For a more app-like standalone launch, use:
 
-`https://cleantext.utilityshelf.com/`
+`https://cleantext.utilityshelf.site/`
 
 If using the subpath route, update `robots.txt`, `sitemap.xml`, and any canonical URLs before final publication.
-

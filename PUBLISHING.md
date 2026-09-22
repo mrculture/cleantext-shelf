@@ -33,11 +33,11 @@ See `DEPLOYMENT-ROUTE.md` for the recommended GitHub-to-Cloudflare publishing ro
 
 Best long-term structure:
 
-`https://utilityshelf.com/text-cleaner/`
+`https://cleantext.utilityshelf.site/`
 
 Good standalone subdomain:
 
-`https://cleantext.utilityshelf.com/`
+`https://cleantext.utilityshelf.site/`
 
 ## Pre-Publish QA
 
