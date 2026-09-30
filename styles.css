@@ -542,6 +542,17 @@ pre {
   margin: 0 0 8px;
 }
 
+.tool-roadmap a,
+.tool-roadmap a:visited {
+  color: #f5faf6;
+  text-underline-offset: 2px;
+}
+
+.tool-roadmap a:hover,
+.tool-roadmap a:focus-visible {
+  color: #f0c35a;
+}
+
 .tool-roadmap p {
   margin-bottom: 0;
 }
